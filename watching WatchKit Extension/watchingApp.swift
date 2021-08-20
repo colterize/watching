@@ -12,7 +12,7 @@ struct watchingApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                WorkoutList()
             }
         }
 
