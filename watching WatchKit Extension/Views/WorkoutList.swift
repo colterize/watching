@@ -13,7 +13,7 @@ struct WorkoutList: View {
 
         List {
             ForEach(Workout.workouts) { viewData in
-                NavigationLink(destination: WorkoutPage()) {
+                NavigationLink(destination: WorkoutPage(id: viewData.id)) {
                     WorkoutRow(workout: viewData)
                 }
             }

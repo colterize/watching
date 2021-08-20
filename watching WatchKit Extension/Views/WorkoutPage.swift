@@ -9,12 +9,13 @@ import SwiftUI
 
 struct WorkoutPage: View {
     @State private var currentTab = 0
+    var id: Int
 
     var body: some View {
         TabView(selection: $currentTab,
                 content:  {
-                    WorkoutDetail(workout: Workout.workouts[currentTab])
-                    WorkoutSummary(workout: Workout.workouts[currentTab])
+                    WorkoutDetail(workout: Workout.workouts[id])
+                    WorkoutSummary(workout: Workout.workouts[id])
 //                    Text("Tab Content 2").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(2)
                 })
     }
@@ -22,6 +23,6 @@ struct WorkoutPage: View {
 
 struct WorkoutPage_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutPage()
+        WorkoutPage(id: 0)
     }
 }
